@@ -9,7 +9,7 @@
   "license": "MIT",
   "description": "Application converting image formats from jpg/png to webP",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "electron/electron.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder"
@@ -17,5 +17,8 @@
   "devDependencies": {
     "electron": "^27.1.2",
     "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "sharp": "^0.32.6"
   }
 }
