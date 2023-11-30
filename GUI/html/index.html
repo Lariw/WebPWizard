@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebPWizard</title>
     <script defer src="../script/convertImage.js"></script>
-</head>
-<body>
-    <h1>WebPWizard</h1>
+    <link rel="stylesheet" href="../style/main.css" />
+  </head>
+  <body>
+<div class="main">
 
-    <input class="js-file" type="file">
-    <button class="js-startConvert">Start converting</button>
-    
-</body>
+    <div class="left">
+        <div class="options">
+            
+        </div>
+    </div>
+    <div class="right">
+        <div class="customInputFile">
+            <label class="inputLabel" for="orginalInputFile">
+              <span class="inputText">Drag and drop or just add</span>
+          </label>
+            <input multiple id="orginalInputFile" class="inputFile" type="file" />
+          </div>
+    </div>
+</div>
+  </body>
 </html>
