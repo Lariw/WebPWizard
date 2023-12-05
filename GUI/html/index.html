@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebPWizard</title>
     <script defer src="../script/convertImage.js"></script>
+    <script defer src="../script/inputFile.js"></script>
     <script
       src="https://kit.fontawesome.com/992def5dc8.js"
       crossorigin="anonymous"
@@ -18,11 +19,14 @@
       <div class="webPcontainer">
         <div class="files">
           <h2 class="global-h2">Upload your images</h2>
-          <div class="files__inputContainer">
+          <div class="files__inputContainer js-inputContainer">
             <label class="files__inputLabel"
               ><i class="fa-solid fa-square-plus fa-beat-fade fa-2xl"></i
               ><input multiple class="files__input js-file" type="file"
             /></label>
+          </div>
+          <div class="files__fileNameContainer js-fileNameContainer">
+            <div>103511_text_add_document_icon.png</div>
           </div>
           <button class="files__btn js-startConvert">Start converting</button>
         </div>
