@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebPWizard</title>
     <script defer src="../script/convertImage.js"></script>
-</head>
-<body>
-    <h1>WebPWizard</h1>
+    <script
+      src="https://kit.fontawesome.com/992def5dc8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../styles/files.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/settings.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="webPcontainer">
+        <div class="files">
+          <h2 class="global-h2">Upload your images</h2>
+          <div class="files__inputContainer">
+            <label class="files__inputLabel"
+              ><i class="fa-solid fa-square-plus fa-beat-fade fa-2xl"></i
+              ><input multiple class="files__input js-file" type="file"
+            /></label>
+          </div>
+          <button class="files__btn js-startConvert">Start converting</button>
+        </div>
 
-    <input class="js-file" type="file">
-    <button class="js-startConvert">Start converting</button>
-    
-</body>
+        <div class="settings">
+          <h2 class="global-h2 global-h2--margin">Customize</h2>
+          <div class="setting_inputsContainer">
+            <label class="settings__label"
+              ><input class="settings__input" type="checkbox" />Lorem</label
+            >
+            <label class="settings__label"
+              ><input class="settings__input" type="checkbox" />Ipsum</label
+            >
+            <label class="settings__label"
+              ><input class="settings__input" type="checkbox" />Dolores</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
