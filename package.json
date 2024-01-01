@@ -19,6 +19,7 @@
     "electron-builder": "^24.9.1"
   },
   "dependencies": {
+    "jszip": "^3.10.1",
     "sharp": "^0.32.6"
   }
 }

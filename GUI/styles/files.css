@@ -129,12 +129,11 @@
   cursor: pointer;
 }
 
-
 .titleImage {
-  max-width: 150px;;
+  max-width: 150px;
   font-size: 16px;
 }
 
 .imagesInterface {
-  display:none;
+  display: none;
 }

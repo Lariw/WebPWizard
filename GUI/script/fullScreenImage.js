@@ -4,15 +4,6 @@ fileInput.addEventListener("change", () => {
   images.forEach((image) => {
     image.addEventListener("click", (event) => {
       console.log(event.currentTarget);
-
-      
-
-
-
-
-
-
-
     });
   });
 });

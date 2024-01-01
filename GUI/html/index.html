@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/992def5dc8.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.1.5/dist/jszip.min.js"></script>
     <script defer src="../script/fullScreenImage.js"></script>
     <link rel="stylesheet" href="../styles/files.css" />
     <link rel="stylesheet" href="../styles/main.css" />
@@ -29,12 +30,15 @@
         <div class="files">
           <h2 class="global-h2">Upload your images</h2>
           <div class="files__inputContainer js-inputContainer">
-
-              <label class="files__inputLabel"
-                ><i class="fa-solid fa-square-plus fa-beat-fade fa-2xl"></i
-                ><form class="fileForm"><input multiple class="files__input js-file" type="file"
-              /></form></label>
-
+            <label class="files__inputLabel"
+              ><i class="fa-solid fa-square-plus fa-beat-fade fa-2xl"></i>
+              <form class="fileForm">
+                <input
+                  multiple
+                  class="files__input js-file"
+                  type="file"
+                /></form
+            ></label>
           </div>
 
           <div class="imagesInterface">
