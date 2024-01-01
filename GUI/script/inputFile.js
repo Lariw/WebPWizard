@@ -15,13 +15,22 @@ const handleFileSelect = () => {
 
     const fileNameDiv = document.createElement("div");
     fileNameDiv.textContent = fileName;
-    fileItemDiv.appendChild(fileNameDiv);
+    fileNameDiv.classList.add('titleImage')
 
+    const fileNameDeleteIcon = document.createElement("div");
+    fileNameDeleteIcon.classList.add('deleteIcon')
+    fileNameDeleteIcon.innerHTML = '<i class="deletePhotoBtn fa-solid fa-trash fa-xl"></i>'
+    
+    fileItemDiv.appendChild(fileNameDeleteIcon);
+
+    fileItemDiv.appendChild(fileNameDiv);
+    fileItemDiv.classList.add("imageNameDiv");
     if (file.type.startsWith("image/")) {
       const thumbnailDiv = document.createElement("div");
       thumbnailDiv.classList.add("thumbnail");
 
       const thumbnailImg = document.createElement("img");
+      thumbnailImg.classList.add('thumbnailImg')
       thumbnailImg.src = URL.createObjectURL(file);
       thumbnailImg.alt = fileName;
 
