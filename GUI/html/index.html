@@ -29,16 +29,21 @@
         <div class="files">
           <h2 class="global-h2">Upload your images</h2>
           <div class="files__inputContainer js-inputContainer">
-            <label class="files__inputLabel"
-              ><i class="fa-solid fa-square-plus fa-beat-fade fa-2xl"></i
-              ><input multiple class="files__input js-file" type="file"
-            /></label>
+
+              <label class="files__inputLabel"
+                ><i class="fa-solid fa-square-plus fa-beat-fade fa-2xl"></i
+                ><form class="fileForm"><input multiple class="files__input js-file" type="file"
+              /></form></label>
+
           </div>
-          <div class="files__fileNameContainer js-fileNameContainer"></div>
-          <button class="files__btn js-startConvert">Start converting</button>
+
+          <div class="imagesInterface">
+            <div class="files__fileNameContainer js-fileNameContainer"></div>
+            <button class="files__btn js-startConvert">Start converting</button>
+          </div>
         </div>
 
-        <div class="fullScreenImage">
+        <!-- <div class="fullScreenImage">
           <div class="fullScreenImage__container">
             <img
               class="fullScreenImage__img"
@@ -52,7 +57,7 @@
               ></i
             ></span>
           </div>
-        </div>
+        </div> -->
 
         <div class="settings">
           <h2 class="global-h2 global-h2--margin">Customize</h2>

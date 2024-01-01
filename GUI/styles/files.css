@@ -134,3 +134,7 @@
   max-width: 150px;;
   font-size: 16px;
 }
+
+.imagesInterface {
+  display:none;
+}
