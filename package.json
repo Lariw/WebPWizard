@@ -1,13 +1,13 @@
 {
   "name": "webpwizard",
-  "productName": "WebPWizard",
+  "productName": "Webp-Wizard",
   "author": {
     "name": "Kamil Hajdula",
     "email": "khajdula@gravityglobal.com"
   },
   "repository": "Lariw/WebPWizard",
   "license": "MIT",
-  "description": "Application converting image formats from jpg/png to webP",
+  "description": "Application converting image formats from .jpg/.png to .webp",
   "version": "1.0.0",
   "main": "electron/electron.js",
   "scripts": {
@@ -21,5 +21,46 @@
   "dependencies": {
     "jszip": "^3.10.1",
     "sharp": "^0.32.6"
+  },
+  "build": {
+    "mac": {
+      "icon": "assets/icon.icns",
+      "x64ArchFiles": "*",
+      "darkModeSupport": true,
+      "target": [
+        {
+          "target": "default",
+          "arch": [
+            "universal"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": {
+        "target": "NSIS",
+        "arch": [
+          "x64"
+        ]
+      }
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Tools;Images"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "**/*"
+    ]
   }
 }

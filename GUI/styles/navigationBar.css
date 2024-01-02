@@ -1,0 +1,51 @@
+.navigationBtn {
+  width: 100%;
+  background-color: #c0c0c0;
+  display: flex;
+  height: 50px;
+  cursor: pointer;
+  justify-content: space-between;
+  -webkit-app-region: drag;
+  box-shadow: -16px -14px 20px 15px #c0c0c0;
+}
+
+.navigationBtn__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navigationBtn__buttonsContainer {
+  display: flex;
+}
+
+.navigationBtn__button {
+  margin-right: 5px;
+  width: 60px;
+  height: 65%;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #d9d9d9;
+  -webkit-app-region: no-drag;
+}
+
+.navigationBtn__button:hover {
+  background-color: #f2f2f2;
+}
+
+.navigationBtn__button--last {
+  margin-right: 10px;
+}
+
+.navigationBtn__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-app-region: no-drag;
+}
+
+.navigationBtn__icon {
+  width: 50px;
+  margin-left: 50px;
+}

@@ -12,20 +12,48 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/jszip@3.1.5/dist/jszip.min.js"></script>
     <script defer src="../script/fullScreenImage.js"></script>
+    <script defer src="../script/navigationBar.js"></script>
     <link rel="stylesheet" href="../styles/files.css" />
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/fullScreenImage.css" />
     <link rel="stylesheet" href="../styles/settings.css" />
-
+    <link rel="stylesheet" href="../styles/navigationBar.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="icon" type="image/x-icon" href="../../icons/icon.ico" />
   </head>
   <body>
     <div class="main">
+      <div class="navigationBtn">
+        <div class="navigationBtn__img">
+          <img class="navigationBtn__icon" src="../../images/icon.png" />
+        </div>
+
+        <div class="navigationBtn__buttonsContainer">
+          <div class="navigationBtn__container">
+            <button class="navigationBtn__button js-minimizeButton">
+              <i class="fa-solid fa-window-maximize"></i>
+            </button>
+          </div>
+          <div class="navigationBtn__container">
+            <button class="navigationBtn__button js-maximizeButton">
+              <i class="fa-regular fa-window-restore"></i>
+            </button>
+          </div>
+          <div class="navigationBtn__container">
+            <button
+              class="navigationBtn__button navigationBtn__button--last js-exitButton"
+            >
+              <i class="fa-regular fa-circle-xmark fa-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="webPcontainer">
         <div class="files">
           <h2 class="global-h2">Upload your images</h2>

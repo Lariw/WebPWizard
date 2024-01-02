@@ -1,31 +1,54 @@
-const { app, BrowserWindow } = require('electron')
-const path = require('node:path')
+const { app, BrowserWindow, ipcMain } = require("electron");
+const path = require("node:path");
 
-function createWindow () {
+function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
     },
-  })
+  });
 
-  win.loadFile('./GUI/html/index.html')
+  ipcMain.on("closeApp", () => {
+    if (win) {
+      win.close();
+    }
+  });
+
+  ipcMain.on("minimizeApp", () => {
+    if (win) {
+      win.minimize();
+    }
+  });
+
+  ipcMain.on("maximizeRestoreApp", () => {
+    if (win) {
+      if (win.isMaximized()) {
+        win.restore();
+      } else {
+        win.maximize();
+      }
+    }
+  });
+
+  win.loadFile("./GUI/html/index.html");
 }
 
 app.whenReady().then(() => {
-  createWindow()
+  createWindow();
 
-  app.on('activate', () => {
+  app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow()
+      createWindow();
     }
-  })
-})
+  });
+});
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") {
+    app.quit();
   }
-})
+});
