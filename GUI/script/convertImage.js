@@ -2,7 +2,20 @@ const sharp = require("sharp");
 const JSZip = require("jszip");
 const startConvertBtn = document.querySelector(".js-startConvert");
 
+const loadingBar = (convertedFiles, totalFiles) => {
+  const loadingBarValue = document.querySelector(".js-barValue");
+  const updateLoadingBar = document.querySelector(".js-updateLoadingBar");
+  let results = (convertedFiles / totalFiles) * 100;
+  results = results.toFixed(1);
+
+  updateLoadingBar.style.width = results + "%";
+  loadingBarValue.innerText = results + "%";
+};
+
 startConvertBtn.addEventListener("click", () => {
+  const showLoadingBar = (document.querySelector(
+    ".js-showLoadingBar"
+  ).style.display = "block");
   convertAndDownloadZip();
 });
 
@@ -17,8 +30,10 @@ async function convertAndDownloadZip() {
 
   const zip = new JSZip();
   const convertPromises = [];
+  const totalFiles = files.length;
+  let convertedFiles = 0;
 
-  for (let i = 0; i < files.length; i++) {
+  for (let i = 0; i < totalFiles; i++) {
     const file = files[i];
 
     const convertPromise = new Promise(async (resolve, reject) => {
@@ -39,6 +54,9 @@ async function convertAndDownloadZip() {
             zip.file(file.name.replace(/\.[^/.]+$/, "") + ".webp", webpBuffer);
           }
 
+          convertedFiles++;
+
+          loadingBar(convertedFiles, totalFiles);
           resolve();
         } catch (error) {
           console.error("Conversion error:", error);

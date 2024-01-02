@@ -11,13 +11,12 @@
   border: 2px dashed #fff;
   height: 60%;
   margin: 15px;
-  /* display: none; */
 }
 
 .files__fileNameContainer {
   max-height: 400px;
   min-width: 50%;
-  padding: 20px;
+  padding: 10px;
   width: 90%;
   overflow: auto;
   background: #3a5c65;
@@ -117,7 +116,7 @@
 }
 
 .deletePhotoBtn {
-  color: crimson;
+  color: #c0c0c0;
   cursor: pointer;
 }
 
@@ -136,4 +135,30 @@
 
 .imagesInterface {
   display: none;
+}
+
+.imagesInterface__loadingBar {
+  height: 24px;
+  min-width: 50%;
+  padding: 1px;
+  width: 70%;
+  background: #3a5c65;
+  border-radius: 6px;
+  margin: 40px auto;
+  display: none;
+}
+
+.imagesInterface__activeBar {
+  width: 0%;
+  height: 100%;
+  background-color: green;
+  display: flex;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.barValue {
+  display: flex;
+  justify-content: center;
 }
