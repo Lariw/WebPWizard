@@ -20,8 +20,7 @@ startConvertBtn.addEventListener("click", () => {
 });
 
 async function convertAndDownloadZip() {
-  const fileInput = document.querySelector(".js-file");
-  const files = fileInput.files;
+  const files = selectedFiles;
 
   if (files.length === 0) {
     alert("Please select at least one image file.");

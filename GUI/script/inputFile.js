@@ -2,15 +2,17 @@ const fileInput = document.querySelector(".js-file");
 const inputContainer = document.querySelector(".js-inputContainer");
 const nameImgContainer = document.querySelector(".js-fileNameContainer");
 const imagesInterface = document.querySelector(".imagesInterface");
+let selectedFiles = [];
+
 const handleFileSelect = () => {
   nameImgContainer.innerHTML = "";
-
+  selectedFiles = [];
   const files = event.target.files;
 
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
     const fileName = file.name;
-
+    selectedFiles.push(file);
     const fileItemDiv = document.createElement("div");
     fileItemDiv.classList.add("fileItem");
 
@@ -79,10 +81,11 @@ const deletePhoto = () => {
       showMainInterface();
     });
   } else {
-    deletePhotoBtn.forEach((icon) => {
+    deletePhotoBtn.forEach((icon, index) => {
       icon.addEventListener("click", () => {
         icon.parentElement.parentElement.style.display = "none";
         iconsLenght -= 1;
+        selectedFiles.splice(index, 1);
         if (iconsLenght == 0) {
           showMainInterface();
         }
