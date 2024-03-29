@@ -1,6 +1,6 @@
 # WebPWizard
 
-Welcome to my WebPWizard application repository! This application allows users to convert JPG/PNG files to the WebP format, helping to save disk space through image optimization.
+This application allows users to convert JPG/PNG files to the WebP format, helping to save disk space through image optimization.
 
 ## Tools Used
  - Electron: Framework used for creating cross-platform desktop applications with web technologies.
