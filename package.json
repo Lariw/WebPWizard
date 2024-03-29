@@ -8,7 +8,7 @@
   "repository": "Lariw/WebPWizard",
   "license": "MIT",
   "description": "Application converting image formats from .jpg/.png to .webp",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "main": "electron/electron.js",
   "scripts": {
     "start": "electron .",
