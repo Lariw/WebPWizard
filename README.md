@@ -2,6 +2,9 @@
 
 This application allows users to convert JPG/PNG files to the WebP format, helping to save disk space through image optimization.
 
+![webp](https://github.com/Lariw/WebPWizard/assets/98982966/c91c2af8-8b0b-4096-8bd7-526ffb020b7e)
+
+
 ## Tools Used
  - Electron: Framework used for creating cross-platform desktop applications with web technologies.
  - HTML: Markup language used for structuring the application interface.
