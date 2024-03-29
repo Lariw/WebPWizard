@@ -1,6 +1,7 @@
 body {
   margin: 0;
   color: #fff;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .main {
@@ -18,7 +19,8 @@ body {
 .global-h2 {
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 5px;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .global-h2--margin {

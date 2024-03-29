@@ -9,8 +9,8 @@
 
 .files__inputContainer {
   border: 2px dashed #fff;
-  height: 60%;
-  margin: 15px;
+  height: 400px;
+  margin: 35px;
 }
 
 .files__fileNameContainer {
@@ -64,6 +64,7 @@
   padding: 10px;
   cursor: pointer;
   background-color: #9ab3c1;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .files__btn:hover {
@@ -83,7 +84,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
-  margin: 5px;
   align-items: center;
   font-size: 10px;
   border-radius: 5px;
@@ -130,7 +130,7 @@
 
 .titleImage {
   max-width: 150px;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .imagesInterface {

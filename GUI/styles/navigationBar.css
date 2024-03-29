@@ -47,6 +47,7 @@
 .navigationBtn__icon {
   width: 30px;
   margin-left: 50px;
+  transition:ease 0.2s
 }
 .navigationBtn__icon:hover {
   width: 50px;
