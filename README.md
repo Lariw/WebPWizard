@@ -24,7 +24,7 @@ To run the application locally, follow these steps:
 - Run npm install to install dependencies.
 - Run npm start to start the application.
 
-or download it from releases [here](https://github.com/Lariw/WebPWizard/releases)
+or download from releases [here](https://github.com/Lariw/WebPWizard/releases)
 
 
 ## License
