@@ -24,6 +24,7 @@
   },
   "build": {
     "mac": {
+      "mergeASARs": false,
       "icon": "assets/icon.icns",
       "x64ArchFiles": "*",
       "darkModeSupport": true,
